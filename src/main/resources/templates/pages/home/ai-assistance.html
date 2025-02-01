@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head th:replace="~{fragments/home-layout.html :: head}"></head>
+<body>
+<header th:replace="~{fragments/home-layout.html :: header}"></header>
+<article class="about-us">
+    <header>
+        <h1 class="about-us-headline">
+            AI Assistance
+        </h1>
+    </header>
+    <section>
+        <p>
+            This feature is currently undergoing maintenance and upgrades. Our team is working to enhance your digital
+            experience. Please check back later.
+        </p>
+        <p>
+            In the meantime, feel free to explore our other services or reach out through our <a th:href="@{/contact}" class="link-basic">Encrypted Commlink</a> for
+            further assistance.
+        </p>
+    </section>
+</article>
+<footer th:replace="~{fragments/home-layout.html :: footer}"></footer>
+</body>
+</html>

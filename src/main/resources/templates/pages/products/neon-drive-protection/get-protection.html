@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head th:replace="~{fragments/products-layout.html :: head}"></head>
+<body>
+<header th:replace="~{fragments/products-layout.html :: header}"></header>
+<article class="about-us container-fluid">
+    <header>
+        <h1 class="about-us-headline">
+            Neon Drive Protection
+        </h1>
+        <br>
+        <h4 class="product-headline">
+            "Drive Beyond Limits. We've Got Your Back."
+        </h4>
+        <h5 class="product-headline">
+            "From neon highways to the dark alleys of the grid, your vehicle stays safe with Neon Drive Protection."
+        </h5>
+    </header>
+    <section class="container-fluid">
+        <div class="d-flex justify-content-center align-items-center">
+            <img alt="neon-drive" class="neural-image img-fluid" th:src="@{../images/neon-drive.jpg}">
+        </div>
+
+        <!-- Comparing Cards -->
+        <div class="container my-5">
+            <h1 class="text-center compare-plans mb-4">Choose your neon protection and hit the streets</h1>
+            <div class="row justify-content-center">
+
+                <!-- Basic -->
+                <div class="col-md-4">
+                    <div class="card custom-card text-center shadow-sm d-flex flex-column h-100">
+                        <div class="card-header card-custom-header">
+                            <h4 class="card-title custom-card-title">Basic DriveShield</h4>
+                            <p class="card-price">⌬19<span class="card-header-muted">/month</span></p>
+                        </div>
+                        <div class="card-body card-body-custom">
+                            <ul class="list-unstyled">
+                                <li>☑️ Essential Cybersecurity Shield</li>
+                                <li>❌ GPS Integrity Protection</li>
+                                <li>❌ Real-Time Monitoring</li>
+                                <li>☑️ Standard Incident Response</li>
+                                <li>⌬10k Coverage Limit</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Elite -->
+                <div class="col-md-4">
+                    <div class="card custom-card text-center shadow-sm d-flex flex-column h-100">
+                        <div class="card-header card-elite-header">
+                            <h4 class="card-title custom-card-title">Elite CyberDrive</h4>
+                            <p class="card-price">⌬49<span class="card-header-muted">/month</span></p>
+                        </div>
+                        <div class="card-body card-body-custom">
+                            <ul class="list-unstyled">
+                                <li>☑️ Advanced Cybersecurity Shield</li>
+                                <li>☑️ Standard GPS Integrity Protection</li>
+                                <li>☑️ Basic Real-Time Monitoring</li>
+                                <li>☑️ Priority Incident Response</li>
+                                <li>⌬30k Coverage Limit</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ultimate -->
+                <div class="col-md-4">
+                    <div class="card custom-card text-center shadow-sm d-flex flex-column h-100">
+                        <div class="card-header card-custom-header">
+                            <h4 class="card-title custom-card-title">Ultimate NeonGuard</h4>
+                            <p class="card-price">⌬99<span class="card-header-muted">/month</span></p>
+                        </div>
+                        <div class="card-body card-body-custom">
+                            <ul class="list-unstyled">
+                                <li>☑️ Full Suite Cybersecurity Shield</li>
+                                <li>☑️ Enhanced GPS Integrity Protection</li>
+                                <li>☑️ 24/7 Real-Time Monitoring</li>
+                                <li>👑 VIP Incident Response</li>
+                                <li>🤑 Unlimited Coverage Limit</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container my-5">
+            <h2 class="text-center compare-plans mb-4">Trusted by Riders Who Roam the Digital Roads</h2>
+            <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+                <!-- Customer Testimonial -->
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="0" class="active"></button>
+                    <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="1"></button>
+                    <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="2"></button>
+                </div>
+                <div class="carousel-inner">
+
+                    <!-- Basic Testimonial -->
+                    <div class="carousel-item active mb-2">
+                        <div class="card text-center carousel-card shadow-sm">
+                            <div class="card-body carousel-custom">
+                                <p class="card-text custom-card-text">"Affordable protection for my daily rides. I never worry about someone hacking my car anymore!"</p>
+                                <h5 class="card-title custom-card-title">Basic DriveShield</h5>
+                                <p class="card-header-muted">- Vega T., Commuter</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Elite Testimonial -->
+                    <div class="carousel-item mb-2">
+                        <div class="card text-center carousel-card shadow-sm">
+                            <div class="card-body carousel-custom">
+                                <p class="card-text custom-card-text">"When my car was hacked, Elite CyberDrive restored control instantly. Now I drive without fear."</p>
+                                <h5 class="card-title custom-card-title">Elite CyberDrive</h5>
+                                <p class="card-header-muted">- Rina K., Digital Nomad</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Ultimate Testimonial -->
+                    <div class="carousel-item mb-2">
+                        <div class="card text-center carousel-card shadow-sm">
+                            <div class="card-body carousel-custom">
+                                <p class="card-text custom-card-text">"I own a fleet of autonomous vehicles, and Ultimate NeonGuard has been an absolute game-changer for our security."</p>
+                                <h5 class="card-title custom-card-title">Ultimate NeonGuard</h5>
+                                <p class="card-header-muted">- Dax L., Fleet Manager</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a class="carousel-control-prev" th:href="@{'#testimonialCarousel'}" role="button" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </a>
+                <a class="carousel-control-next" th:href="@{'#testimonialCarousel'}" role="button" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- Insurance Form -->
+        <div sec:authorize="hasRole('USER')" class="container my-5">
+            <h2 class="text-center compare-plans mb-4">Drive the Future Safely: Neon Guard Ready</h2>
+            <form method="post"
+                  th:action="@{/products/protect-your-ride}"
+                  th:object="${insuranceDTO}"
+            >
+                <div class="form-row">
+                    <label class="form-label col-3" for="insuranceName">Insurance Name:</label>
+                    <input class="col-3 form-i-50 form-i-name form-input" type="text" id="insuranceName" th:field="*{insuranceName}" readonly
+                           value="Neon Drive Protection"/>
+                </div>
+                <div class="form-row">
+                    <label class="form-label col-3" for="insuranceType">Insurance Type:</label>
+                    <select class="col-3 form-i-50 form-input" id="insuranceType" th:field="*{insuranceType}" onchange="updatePrice()">
+                        <option value="Basic DriveShield">Basic DriveShield</option>
+                        <option value="Elite CyberDrive" selected >Elite CyberDrive</option>
+                        <option value="Ultimate NeonGuard">Ultimate NeonGuard</option>
+                    </select>
+                </div>
+                <div class="form-row">
+                    <label class="col-3 form-label" for="insuranceStartDate">Insurance Start Date:</label>
+                    <input class="col-3 form-i-50 form-input" type="date" id="insuranceStartDate" th:field="*{insuranceStartDate}"/>
+                </div>
+
+                <div class="form-row">
+                    <label class="col-3 form-label" for="insuranceEndDate">Insurance End Date:</label>
+                    <input class="col-3 form-i-50 form-input" type="date" id="insuranceEndDate" th:field="*{insuranceEndDate}"/>
+                </div>
+                <div class="form-row">
+                    <label class="col-3 form-label" for="insurancePrice">Price:</label>
+                    <div class="col-3">
+                        ⌬<input class="input-unstyled" type="text" id="insurancePrice" th:field="*{price}" readonly/>/month
+                    </div>
+                </div>
+
+                <div>
+                    <button class="custom-button submit-btn" type="submit">Submit</button>
+                </div>
+
+            </form>
+        </div>
+    </section>
+</article>
+<footer th:replace="~{fragments/products-layout.html :: footer}"></footer>
+<script th:src="@{../scripts/bootstrap.bundle.min.js}"></script>
+<script th:src="@{../scripts/insurance-price-script.js}"></script>
+</body>
+</html>

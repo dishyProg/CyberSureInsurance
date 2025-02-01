@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head th:replace="~{fragments/contact-layout.html :: head}"></head>
+<body>
+<header th:replace="~{fragments/contact-layout.html :: header}"></header>
+<article class="about-us">
+    <div class="flash-message-success" th:text="${success}" th:if="${success}"></div>
+    <header>
+        <h1 class="about-us-headline">
+            Contact
+        </h1>
+    </header>
+    <div class="about-us-div col-7">
+        <p>
+            "Need assistance in the digital realm?"
+        </p>
+        <p>
+            "Reach out, and we’ll handle the rest. Your security, our priority."
+        </p>
+    </div>
+    <h3 class="about-us-headline">Encrypted CommLink</h3>
+    <section class="contact-section">
+        <div class="container">
+
+            <!-- Contact Form -->
+            <form th:object="${commLinkDTO}"
+                  th:action="@{/contact}"
+                  method="POST"
+                  class="contact-form">
+
+                <div class="form-row">
+                    <div class="col-label">
+                        <label for="full-name" class="form-label">Full Name</label>
+                    </div>
+                    <div class="col-input">
+                        <input th:field="*{customerName}" id="full-name" placeholder="Enter your full name"
+                               class="form-input">
+                        <small class="small-error" th:if="${#fields.hasErrors('customerName')}"
+                               th:errors="*{customerName}"></small>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="col-label">
+                        <label for="email" class="form-label">Email Address</label>
+                    </div>
+                    <div class="col-input">
+                        <input th:field="*{customerEmail}" id="email" placeholder="Enter your email" class="form-input">
+                        <small class="small-error" th:if="${#fields.hasErrors('customerEmail')}"
+                               th:errors="*{customerEmail}"></small>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="col-label">
+                        <label for="message" class="form-label">Message</label>
+                    </div>
+                    <div class="col-input">
+                        <textarea th:field="*{inquiry}" id="message" rows="5" placeholder="Enter your message"
+                                  class="form-input"></textarea>
+                        <small class="small-error" th:if="${#fields.hasErrors('inquiry')}"
+                               th:errors="*{inquiry}"></small>
+                    </div>
+                </div>
+
+                <button type="submit" class="custom-button submit-btn">SEND DATA</button>
+            </form>
+        </div>
+    </section>
+</article>
+<footer th:replace="~{fragments/contact-layout.html :: footer}"></footer>
+</body>
+</html>

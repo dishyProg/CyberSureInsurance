@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head th:replace="~{fragments/account-layout.html :: head}"></head>
+<body>
+<header th:replace="~{fragments/account-layout.html :: header}"></header>
+<article>
+    <div class="flash-message-success" th:text="${success}" th:if="${success}"></div>
+    <div class="login-box-register">
+
+        <!-- Admin detail edit form  -->
+        <form th:object="${userDTO}"
+              th:action="@{/account/admin-edit}"
+              method="POST">
+            <div th:if="${error}" class="alert alert-danger" role="alert">
+                <p th:text="${error}"></p>
+            </div>
+            <div class="row">
+                <div class="user-box col">
+                    <input type="text" name="firstName" id="first-name" th:field="*{firstName}">
+                    <label for="first-name">First Name</label>
+                    <small class="small-error-reg" th:errors="*{firstName}"></small>
+                </div>
+                <div class="user-box col">
+                    <input type="text" name="lastName" id="last-name" th:field="*{lastName}">
+                    <label for="last-name">Last Name</label>
+                    <small class="small-error-reg" th:errors="*{lastName}"></small>
+                </div>
+            </div>
+            <div class="row">
+                <div class="user-box col">
+                    <input type="text" name="email" id="email" th:field="*{email}">
+                    <label for="email">Email</label>
+                    <small class="small-error-reg" th:errors="*{email}"></small>
+                </div>
+                <div class="user-box col">
+                    <input type="text" name="phoneNumber" id="phoneNumber" th:field="*{phoneNumber}">
+                    <label for="phoneNumber">Phone Number</label>
+                    <small class="small-error-reg" th:errors="*{phoneNumber}"></small>
+                </div>
+            </div>
+            <div class="row">
+                <div class="user-box col">
+                    <input type="text" name="streetAndNumber" id="street-and-number" th:field="*{streetAndNumber}">
+                    <label for="street-and-number">Street & Number</label>
+                    <small class="small-error-reg" th:errors="*{streetAndNumber}"></small>
+                </div>
+                <div class="user-box col">
+                    <input type="text" name="city" id="city" th:field="*{city}">
+                    <label for="city">City</label>
+                    <small class="small-error-reg" th:errors="*{city}"></small>
+                </div>
+            </div>
+            <div class="row">
+                <div class="user-box col">
+                    <input type="text" name="zipCode" id="zip" th:field="*{zipCode}">
+                    <label for="zip">Zip/Postal Code</label>
+                    <small class="small-error-reg" th:errors="*{zipCode}"></small>
+                </div>
+                <div class="user-box col">
+                    <input type="text" name="country" id="country" th:field="*{country}">
+                    <label for="country">Country</label>
+                    <small class="small-error-reg" th:errors="*{country}"></small>
+                </div>
+            </div>
+            <center>
+                <button class="account-btn" type="submit">
+                    Update Details
+                    <span></span>
+                </button>
+            </center>
+        </form>
+    </div>
+</article>
+<footer th:replace="~{fragments/account-layout.html :: footer}"></footer>
+</body>
+</html>

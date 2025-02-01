@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head th:replace="~{fragments/account-layout.html :: head}"></head>
+<body>
+<header th:replace="~{fragments/account-layout.html :: header}"></header>
+<article class="about-us container-fluid">
+    <section>
+        <div>
+            <h3 class="about-us-headline">Insurance Name</h3>
+            <p th:text="${insurance.insuranceName}"></p>
+        </div>
+        <div>
+            <h3 class="about-us-headline m-20">Insurance Type</h3>
+            <p th:text="${insurance.insuranceType}"></p>
+        </div>
+        <div>
+            <h3 class="about-us-headline m-20">Insurance Start Date</h3>
+            <p th:text="${insurance.insuranceStartDate}"></p>
+        </div>
+        <div>
+            <h3 class="about-us-headline m-20">Insurance End Date</h3>
+            <p th:text="${insurance.insuranceEndDate}"></p>
+        </div>
+        <div>
+            <h3 class="about-us-headline m-20">Insurance Price</h3>
+            <br>
+            ⌬<span th:text="${insurance.price}"></span>
+        </div>
+        <div class="mt-30">
+            <a sec:authorize="hasRole('USER')" class="link-basic" th:href="@{/account/user-details}">Back to My Profile</a>
+        </div>
+    </section>
+</article>
+<footer th:replace="~{fragments/account-layout.html :: footer}"></footer>
+</body>
+</html>

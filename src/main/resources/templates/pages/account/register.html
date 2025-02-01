@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head th:replace="~{fragments/account-layout.html :: head}"></head>
+<body>
+<header th:replace="~{fragments/account-layout.html :: header}"></header>
+<article>
+    <div class="flash-message-success log" th:text="${success}" th:if="${success}"></div>
+    <div class="login-box-register">
+
+        <!-- Register Form -->
+        <form th:object="${userDTO}"
+              th:action="@{/account/register}"
+              method="POST">
+            <div class="row">
+                <div class="user-box col">
+                    <input type="text" name="first-name" id="first-name" th:field="*{firstName}">
+                    <label for="first-name">First Name</label>
+                    <small class="small-error-reg" th:errors="*{firstName}"></small>
+                </div>
+                <div class="user-box col">
+                    <input type="text" name="last-name" id="last-name" th:field="*{lastName}">
+                    <label for="last-name">Last Name</label>
+                    <small class="small-error-reg" th:errors="*{lastName}"></small>
+                </div>
+            </div>
+            <div class="row">
+                <div class="user-box col">
+                    <input type="text" name="email" id="email" th:field="*{email}">
+                    <label for="email">Email</label>
+                    <small class="small-error-reg" th:errors="*{email}"></small>
+                </div>
+                <div class="user-box col">
+                    <input type="text" name="phoneNumber" id="phoneNumber" th:field="*{phoneNumber}">
+                    <label for="phoneNumber">Phone Number</label>
+                    <small class="small-error-reg" th:errors="*{phoneNumber}"></small>
+                </div>
+            </div>
+            <div class="row">
+                <div class="user-box col">
+                    <input type="password" name="password" id="password" th:field="*{password}">
+                    <label for="password">Password</label>
+                    <small class="small-error-reg" th:errors="*{password}"></small>
+                </div>
+                <div class="user-box col">
+                    <input type="password" name="password" id="confirm-password" th:field="*{confirmPassword}">
+                    <label for="confirm-password">Confirm Password</label>
+                    <small class="small-error-reg" th:errors="*{confirmPassword}"></small>
+                </div>
+            </div>
+            <div class="row">
+                <div class="user-box col">
+                    <input type="text" name="street-and-number" id="street-and-number" th:field="*{streetAndNumber}">
+                    <label for="street-and-number">Street & Number</label>
+                    <small class="small-error-reg" th:errors="*{streetAndNumber}"></small>
+                </div>
+                <div class="user-box col">
+                    <input type="text" name="city" id="city" th:field="*{city}">
+                    <label for="city">City</label>
+                    <small class="small-error-reg" th:errors="*{city}"></small>
+                </div>
+            </div>
+            <div class="row">
+                <div class="user-box col">
+                    <input type="text" name="zip" id="zip" th:field="*{zipCode}">
+                    <label for="zip">Zip/Postal Code</label>
+                    <small class="small-error-reg" th:errors="*{zipCode}"></small>
+                </div>
+                <div class="user-box col">
+                    <input type="text" name="country" id="country" th:field="*{country}">
+                    <label for="country">Country</label>
+                    <small class="small-error-reg" th:errors="*{country}"></small>
+                </div>
+            </div>
+            <center>
+                <button class="account-btn" type="submit">
+                    JOIN NOW
+                    <span></span>
+                </button>
+            </center>
+            <center>
+                <small class="account-text-small">Already part of the network?
+                    <a class="account-link" th:href="@{/account/login}">Dive back</a>
+                    into CyberSure Security.
+                </small>
+            </center>
+        </form>
+    </div>
+</article>
+<footer th:replace="~{fragments/account-layout.html :: footer}"></footer>
+</body>
+</html>

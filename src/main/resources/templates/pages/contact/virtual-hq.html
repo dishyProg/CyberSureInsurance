@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head th:replace="~{fragments/contact-layout.html :: head}"></head>
+<body>
+<header th:replace="~{fragments/contact-layout.html :: header}"></header>
+<article class="about-us">
+    <header>
+        <h1 class="about-us-headline">
+            Virtual HQ: Knowledge Hub
+        </h1>
+    </header>
+    <section>
+        <div class="container my-5">
+            <div class="accordion" id="faqMainAccordion">
+
+                <!-- Category: Claims -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="categoryClaims">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseClaims" aria-expanded="true" aria-controls="collapseClaims">
+                            Claims
+                        </button>
+                    </h2>
+                    <div id="collapseClaims" class="accordion-collapse collapse show" aria-labelledby="categoryClaims"
+                         data-bs-parent="#faqMainAccordion">
+                        <div class="accordion-body">
+                            <div class="accordion" id="claimsAccordion">
+
+                                <!-- Question 1 -->
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="claimQ1">
+                                        <button class="accordion-button collapsed" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#collapseClaim1"
+                                                aria-expanded="false" aria-controls="collapseClaim1">
+                                            How do I file a claim?
+                                        </button>
+                                    </h2>
+                                    <div id="collapseClaim1" class="accordion-collapse collapse"
+                                         aria-labelledby="claimQ1" data-bs-parent="#claimsAccordion">
+                                        <div class="accordion-body">
+                                            You can file a claim through your <strong class="text-cyber-yellow">Virtual
+                                            HQ</strong> dashboard under the <a class="link-basic" th:href="@{/claims}">Claims</a>
+                                            section. Our AI-driven system ensures a smooth and efficient process.
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Question 2 -->
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="claimQ2">
+                                        <button class="accordion-button collapsed" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#collapseClaim2"
+                                                aria-expanded="false" aria-controls="collapseClaim2">
+                                            How long does it take to process a claim?
+                                        </button>
+                                    </h2>
+                                    <div id="collapseClaim2" class="accordion-collapse collapse"
+                                         aria-labelledby="claimQ2" data-bs-parent="#claimsAccordion">
+                                        <div class="accordion-body">
+                                            The processing time depends on the claim type, but most are handled within
+                                            <strong class="text-cyber-yellow">24 to 48 hours</strong> through our
+                                            automated system.
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Category: Insurance Policies -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="categoryInsurance">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseInsurance" aria-expanded="false"
+                                aria-controls="collapseInsurance">
+                            Insurance Policies
+                        </button>
+                    </h2>
+                    <div id="collapseInsurance" class="accordion-collapse collapse" aria-labelledby="categoryInsurance"
+                         data-bs-parent="#faqMainAccordion">
+                        <div class="accordion-body">
+                            <div class="accordion" id="insuranceAccordion">
+
+                                <!-- Question 1 -->
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="insuranceQ1">
+                                        <button class="accordion-button collapsed" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#collapseInsurance1"
+                                                aria-expanded="false" aria-controls="collapseInsurance1">
+                                            What types of insurance does CyberSure offer?
+                                        </button>
+                                    </h2>
+                                    <div id="collapseInsurance1" class="accordion-collapse collapse"
+                                         aria-labelledby="insuranceQ1" data-bs-parent="#insuranceAccordion">
+                                        <div class="accordion-body">
+                                            We provide coverage for <strong class="text-cyber-yellow">Neural-Health
+                                            Protection</strong>, <strong class="text-cyber-yellow">Data Asset
+                                            Shielding</strong>, <strong class="text-cyber-yellow">Neon Drive
+                                            Protection</strong>, <strong class="text-cyber-yellow">CyberGlide Travel
+                                            Coverage</strong>, and <strong
+                                                class="text-cyber-yellow">AugmentGuard</strong>.
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Question 2 -->
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="insuranceQ2">
+                                        <button class="accordion-button collapsed" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#collapseInsurance2"
+                                                aria-expanded="false" aria-controls="collapseInsurance2">
+                                            Can I customize my insurance coverage?
+                                        </button>
+                                    </h2>
+                                    <div id="collapseInsurance2" class="accordion-collapse collapse"
+                                         aria-labelledby="insuranceQ2" data-bs-parent="#insuranceAccordion">
+                                        <div class="accordion-body">
+                                            Yes! We offer flexible plans that allow you to customize your insurance
+                                            coverage to fit your specific needs.
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Category: Security & Privacy -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="categorySecurity">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseSecurity" aria-expanded="false"
+                                aria-controls="collapseSecurity">
+                            Security & Privacy
+                        </button>
+                    </h2>
+                    <div id="collapseSecurity" class="accordion-collapse collapse" aria-labelledby="categorySecurity"
+                         data-bs-parent="#faqMainAccordion">
+                        <div class="accordion-body">
+                            <div class="accordion" id="securityAccordion">
+
+                                <!-- Question 1 -->
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="securityQ1">
+                                        <button class="accordion-button collapsed" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#collapseSecurity1"
+                                                aria-expanded="false" aria-controls="collapseSecurity1">
+                                            How does CyberSure protect my data?
+                                        </button>
+                                    </h2>
+                                    <div id="collapseSecurity1" class="accordion-collapse collapse"
+                                         aria-labelledby="securityQ1" data-bs-parent="#securityAccordion">
+                                        <div class="accordion-body">
+                                            We use advanced <strong class="text-cyber-yellow">quantum
+                                            encryption</strong> and AI-driven anomaly detection to ensure your data
+                                            remains secure from cyber threats.
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Question 2 -->
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="securityQ2">
+                                        <button class="accordion-button collapsed" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#collapseSecurity2"
+                                                aria-expanded="false" aria-controls="collapseSecurity2">
+                                            Does CyberSure share my personal information?
+                                        </button>
+                                    </h2>
+                                    <div id="collapseSecurity2" class="accordion-collapse collapse"
+                                         aria-labelledby="securityQ2" data-bs-parent="#securityAccordion">
+                                        <div class="accordion-body">
+                                            No. We adhere to strict <strong class="text-cyber-yellow">privacy
+                                            protocols</strong> and never share your information without explicit
+                                            consent.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</article>
+<footer th:replace="~{fragments/contact-layout.html :: footer}"></footer>
+<script th:src="@{/scripts/bootstrap.bundle.min.js}"></script>
+</body>
+</html>

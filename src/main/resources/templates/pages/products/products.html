@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head th:replace="~{fragments/products-layout.html :: head}"></head>
+<body>
+<header th:replace="~{fragments/products-layout.html :: header}"></header>
+<article class="about-us container-fluid">
+    <header>
+        <h1 class="about-us-headline" data-text="Products">
+            Products
+        </h1>
+    </header>
+    <section>
+        <div class="about-us-div">
+            <p>
+                In a world where technology and humanity are more intertwined than ever, traditional insurance is no
+                longer enough. At <strong class="text-cyber-yellow">CyberSure Security</strong>, we provide specialized coverage designed for the digital frontier.
+                Whether it’s protecting your mind from cyber threats or safeguarding your augmented body, our insurance
+                products are crafted for the unique challenges of a connected, high-tech world. Explore our range of
+                plans that ensure your security, wherever the future takes you.
+            </p>
+        </div>
+        <div>
+            <a th:href="@{/products/neural-health-protection}">
+                <h3 class="about-us-headline">
+                    Neural Health Protection
+                </h3>
+            </a>
+            <div class="about-us-div row">
+                <p>
+                    <strong class="text-cyber-pink">Neural Health Protection</strong> keeps your mind safe from digital threats, cyber-attacks, and data tampering.
+                    With advanced protocols, your cognitive functions and neural enhancements stay secure. Whether for
+                    personal use or professional augmentation, this plan offers peace of mind in a tech-driven world.
+                </p>
+                <hr>
+                <a th:href="@{/products/guard-your-mind}"><button class="custom-button neural-btn col-3">Guard Your Mind!</button></a>
+            </div>
+        </div>
+        <div>
+            <a th:href="@{/products/data-asset-shielding}">
+                <h3 class="about-us-headline">
+                    Data Asset Shielding
+                </h3>
+            </a>
+            <div class="about-us-div row">
+                <p>
+                    <strong class="text-cyber-pink">Data Asset Shielding</strong> safeguards your most valuable digital assets from hackers and data theft. With
+                    continuous monitoring and advanced encryption, your sensitive information remains secure. Protect your
+                    digital footprint with confidence, knowing your data is fully covered.
+                </p>
+                <hr class="my-2">
+                <a th:href="@{/products/lock-your-data}">
+                    <button class="custom-button data-btn col-3">Lock Your Data!</button>
+                </a>
+            </div>
+        </div>
+        <div>
+            <a th:href="@{/products/neon-drive-protection}">
+                <h3 class="about-us-headline">
+                    Neon Drive Protection
+                </h3>
+            </a>
+            <div class="about-us-div row">
+                <p>
+                    <strong class="text-cyber-pink">Neon Drive Protection</strong> covers your vehicle, whether it’s self-driving or augmented, from accidents and
+                    tech malfunctions. In a world of digital vulnerabilities, we ensure your ride stays safe from cyber
+                    threats. Drive through the neon-lit streets with peace of mind, knowing you’re covered.
+                </p>
+                <hr class="my-2">
+                <a th:href="@{/products/protect-your-ride}">
+                    <button class="custom-button drive-btn col-3">Protect Your Ride!</button>
+                </a>
+            </div>
+        </div>
+        <div>
+            <a th:href="@{/products/cyber-glide-travel-coverage}">
+                <h3 class="about-us-headline">
+                    CyberGlide Travel Coverage
+                </h3>
+            </a>
+            <div class="about-us-div row">
+                <p>
+                    <strong class="text-cyber-pink">CyberGlide Travel Coverage</strong> ensures you’re protected on all your journeys, whether across the megacity or
+                    beyond. We cover digital disruptions, accidents, and travel delays, so you can travel worry-free.
+                    Wherever you go, your body and data are secure with our plan.
+                </p>
+                <hr class="my-2">
+                <a th:href="@{/products/travel-safe}">
+                    <button class="custom-button travel-btn col-3">Travel Safe!</button>
+                </a>
+            </div>
+        </div>
+        <div>
+            <a th:href="@{/products/augment-guard}">
+                <h3 class="about-us-headline">
+                    AugmentGuard
+                </h3>
+            </a>
+            <div class="about-us-div row">
+                <p>
+                    <strong class="text-cyber-pink">AugmentGuard</strong> protects your cybernetic enhancements, from malfunctions to theft and damage. In a world
+                    where technology blends with biology, your body deserves the same protection as your data. Keep your
+                    physical upgrades secure and functioning with comprehensive coverage.
+                </p>
+                <hr class="my-2">
+                <a th:href="@{/products/shield-enhancements}">
+                    <button class="custom-button augment-btn col-3">Shield Enhancements!</button>
+                </a>
+            </div>
+        </div>
+    </section>
+</article>
+<footer th:replace="~{fragments/products-layout.html :: footer}"></footer>
+</body>
+</html>

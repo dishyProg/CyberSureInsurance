@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head th:replace="~{/fragments/insurance-layout.html :: head}"></head>
+<body>
+<header th:replace="~{/fragments/insurance-layout.html :: header}"></header>
+<article class="about-us container-fluid">
+    <div class="flash-message-success" th:text="${success}" th:if="${success}"></div>
+    <header>
+        <h1 class="about-us-headline">
+            Edit My Insurance
+        </h1>
+    </header>
+    <div class="container my-5">
+        <form th:object="${insuranceDTO}"
+              th:action="@{'/products/edit/' + ${insuranceId}}"
+              method="POST">
+            <div class="form-row">
+                <label class="form-label col-3" for="insuranceName">Insurance Name:</label>
+                <input class="col-3 form-i-50 form-i-name form-input" type="text" id="insuranceName" th:field="*{insuranceName}" readonly
+                       value="Neon Drive Protection"/>
+            </div>
+            <div class="form-row">
+                <label class="form-label col-3" for="insuranceType">Insurance Type:</label>
+                <select class="col-3 form-i-50 form-input" id="insuranceType" th:field="*{insuranceType}" onchange="updatePrice()">
+                    <option value="Basic DriveShield">Basic DriveShield</option>
+                    <option value="Elite CyberDrive" selected >Elite CyberDrive</option>
+                    <option value="Ultimate NeonGuard">Ultimate NeonGuard</option>
+                </select>
+            </div>
+            <div class="form-row">
+                <label class="col-3 form-label" for="insuranceStartDate">Insurance Start Date:</label>
+                <input class="col-3 form-i-50 form-input" type="date" id="insuranceStartDate" th:field="*{insuranceStartDate}"/>
+            </div>
+
+            <div class="form-row">
+                <label class="col-3 form-label" for="insuranceEndDate">Insurance End Date:</label>
+                <input class="col-3 form-i-50 form-input" type="date" id="insuranceEndDate" th:field="*{insuranceEndDate}"/>
+            </div>
+            <div class="form-row">
+                <label class="col-3 form-label" for="insurancePrice">Price:</label>
+                <div class="col-3">
+                    ⌬<input class="input-unstyled" type="text" id="insurancePrice" th:field="*{price}" readonly/>/month
+                </div>
+            </div>
+
+            <div>
+                <button class="custom-button submit-btn" type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+</article>
+<footer th:replace="~{/fragments/insurance-layout.html :: footer}"></footer>
+<script th:src="@{/scripts/insurance-price-script.js}"></script>
+</body>
+</html>

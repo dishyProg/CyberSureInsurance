@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head th:replace="~{fragments/products-layout.html :: head}"></head>
+<body>
+<header th:replace="~{fragments/products-layout.html :: header}"></header>
+<article class="about-us container-fluid">
+    <header>
+        <h1 class="about-us-headline">
+            Data Asset Shielding
+        </h1>
+        <h4 class="product-headline">
+            "Fortify Your Data: Safeguard Your Digital Empire and Secure Your Future in the Cyber World"
+        </h4>
+        <h5 class="product-headline">
+            "In the digital age, your data is everything. Keep it secure with the latest in cyber defense."
+        </h5>
+        <hr class="my-2">
+        <a th:href="@{/products/lock-your-data}">
+            <button class="custom-button data-btn col-3">Lock Your Data!</button>
+        </a>
+    </header>
+    <section class="container-fluid">
+        <div class="d-flex justify-content-center align-items-center">
+            <img alt="data-vault" class="neural-image img-fluid" th:src="@{../images/data-vault3.jpg}">
+        </div>
+        <div>
+            <h3 class="product-headline mt-3">
+                "Why Data Asset Shielding?"
+            </h3>
+            <p><strong>Cyber Vault Protection: </strong>Guard your most valuable digital assets with advanced encryption.</p>
+            <p><strong>Data Integrity: </strong>Ensure your data stays intact, even in the face of cyberattacks.</p>
+            <p><strong>Secure Backup: </strong>Automatic and secure backups, so your data is always recoverable.</p>
+        </div>
+        <div>
+            <h3 class="product-headline mt-5">
+                "How We Shield Your Data"
+            </h3>
+            <p><strong>Step 1: </strong>Choose your plan—tailored protection for all your digital assets.</p>
+            <p><strong>Step 2: </strong>AI-powered defense continuously scans for cyber threats and breaches.</p>
+            <p><strong>Step 3: </strong>Instant data recovery and real-time support to get you back on track.</p>
+        </div>
+        <div class="d-flex justify-content-center align-items-center text-center row">
+            <h4 class="product-headline my-4" style="max-width: 500px;">
+                Trusted by Digital Pioneers Everywhere
+            </h4>
+            <blockquote class="blockquote">
+                <p class="mb-0"><i>"When my files were hacked, CyberSure Security brought them back instantly. My digital life is my most precious asset. Now it’s safe."</i></p>
+            </blockquote>
+        </div>
+        <div>
+            <h3 class="product-headline mt-5">
+                "Affordable Protection for Every Digital Asset"
+            </h3>
+            <p><strong>Basic CyberShield</strong> - Essential protection for personal data.</p>
+            <p><strong>Elite DataGuard</strong> - Advanced protection for businesses and professionals.</p>
+            <p><strong>Ultimate DataVault</strong> - Full protection for critical assets and sensitive information.</p>
+        </div>
+    </section>
+</article>
+<footer th:replace="~{fragments/products-layout.html :: footer}"></footer>
+</body>
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head th:fragment="head">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="CyberSure Security - Tomorrow's Protection, Today! Secure your digital legacy with advanced cyber insurance solutions.">
+    <meta name="keywords" content="insurance, digital, security, data, protection, cyber, AI, travel">
+    <meta name="author" content="CyberSure Security">
+    <link rel="icon" th:href="@{/images/cyber-security-icon.png}" type="image/png">
+    <title>Claims</title>
+    <link rel="stylesheet" th:href="@{styles/bootstrap.min.css}" type="text/css">
+    <link rel="stylesheet" th:href="@{styles/style.css}" type="text/css">
+    <link rel="stylesheet" th:href="@{styles/claims-style.css}" type="text/css">
+</head>
+<body>
+<header th:fragment="header">
+    <nav class="navbar sticky-top">
+        <div class="navbar-container container">
+            <div class="d-flex justify-content-between w-100">
+                <!-- Logo -->
+                <a class="navbar-brand" th:href="@{/}">
+                    <img id="logo" th:src="@{images/cyber-security-logo.png}">
+                    <span class="logo">CyberSure Security</span>
+                </a>
+                <!-- Login -->
+                <div class="d-flex ml-auto">
+                    <a sec:authorize="hasRole('USER')" class="navbar-brand" th:href="@{/account/user-details}">
+                        <span style="border-right: 1px solid #00e5ff; padding-right: 15px">My Account</span>
+                    </a>
+                    <a sec:authorize="hasRole('ADMIN')" class="navbar-brand" th:href="@{/account/admin-details}">
+                        <span style="border-right: 1px solid #00e5ff; padding-right: 15px">Admin</span>
+                    </a>
+                    <a sec:authorize="isAnonymous()"  class="navbar-brand" th:href="@{/account/login}">
+                        <span style="border-right: 1px solid #00e5ff; padding-right: 15px">Log in</span>
+                    </a>
+                    <form method="post" th:action="@{/account/logout}">
+                        <button class="navbar-brand logout" sec:authorize="isAuthenticated()">Log out</button>
+                    </form>
+                    <a sec:authorize="isAnonymous()"  class="navbar-brand" th:href="@{/account/register}">
+                        <span>Join Us</span>
+                    </a>
+                </div>
+            </div>
+            <!-- Categories -->
+            <div class="navbar navbar-expand-lg">
+                <ul class="navbar-nav mr-auto">
+                    <!-- About Us -->
+                    <li class="nav-item">
+                        <a class="nav-link navi-link" th:href="@{/about-us}">
+                            <span class="nav-right-border">About Us</span>
+                        </a>
+                    </li>
+                    <!-- Products -->
+                    <li class="nav-item">
+                        <a class="nav-link navi-link" th:href="@{/products}">
+                            <span class="nav-right-border">Products</span>
+                        </a>
+                    </li>
+                    <!-- Claims -->
+                    <li class="nav-item">
+                        <a class="nav-link navi-link active" th:href="@{/claims}">
+                            <span class="nav-right-border">Claims</span>
+                        </a>
+                    </li>
+                    <!-- Contact -->
+                    <li class="nav-item">
+                        <a class="nav-link navi-link" th:href="@{/contact}">
+                            Contact
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!-- AI assistant -->
+            <div class="d-flex ml-auto">
+                <a class="navbar-brand" th:href="@{/ai-assistance}">AI Assistance</a>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<footer class="cyberpunk-footer" th:fragment="footer">
+    <div class="container pt-4">
+        <div class="row">
+            <!-- company info -->
+            <div class="col-md-3 mb-3">
+                <h4 class="footer-logo">CyberSure Security</h4>
+                <p>Tomorrow's Protection, Today!</p>
+            </div>
+            <!-- About us -->
+            <div class="col-md-3 mb-3">
+                <h4 class="footer-title">About Us</h4>
+                <ul class="list-unstyled">
+                    <li><a th:href="@{/about-us/nexus-of-protection}">The Nexus of Protection</a></li>
+                    <li><a th:href="@{/about-us/digital-legacy}">Digital Legacy</a></li>
+                    <li><a th:href="@{/about-us/meet-us}">Meet the Cybernetic Minds</a></li>
+                    <li><a th:href="@{/about-us/ethical-protocols}">Ethical Protocols</a></li>
+                    <li><a th:href="@{/about-us/work-opportunities}">Future Workforce Opportunities</a></li>
+                    <li><a th:href="@{/about-us/holo-press}">Holo-Press Releases</a></li>
+                    <li><a th:href="@{/about-us/security-protocols}">Digital Security Protocols</a></li>
+                </ul>
+            </div>
+            <!-- Quick Links -->
+            <div class="col-md-3 mb-3">
+                <h4 class="footer-title">
+                    Quick Links
+                </h4>
+                <ul class="list-unstyled">
+                    <li><a th:href="@{/products/neural-health-protection}">Neural Health Protection</a></li>
+                    <li><a th:href="@{/products/data-asset-shielding}">Data Asset Shielding</a></li>
+                    <li><a th:href="@{/products/neon-drive-protection}">Neon Drive Protection</a></li>
+                    <li><a th:href="@{/products/cyber-glide-travel-coverage}">CyberGlide Travel Coverage</a></li>
+                    <li><a th:href="@{/products/augment-guard}">AugmentGuard</a></li>
+                </ul>
+            </div>
+
+            <!-- Services and contacts -->
+            <div class="col-md-3 mb-3">
+                <h4 class="footer-title">
+                    Services & Contacts
+                </h4>
+                <ul class="list-unstyled">
+                    <li><a th:href="@{/claims}">Neural Processing</a></li>
+                    <li><a th:href="@{/contact}">Encrypted CommLink</a></li>
+                    <li><a th:href="@{/virtual-hq}">Virtual HQ: Knowledge Hub</a></li>
+                    <li><a th:href="@{/ai-assistance}">AI-Optimised Assistance</a></li>
+                </ul>
+            </div>
+
+            <!-- Info -->
+            <div class="text-center">
+                <p class="footer-bottom"><small>&copy; 2077 CyberSure Security. All rights reserved.</small></p>
+            </div>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

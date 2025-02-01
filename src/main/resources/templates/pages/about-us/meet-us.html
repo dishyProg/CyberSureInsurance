@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head th:replace="~{fragments/about-us-layout.html :: head}"></head>
+<body>
+<header th:replace="~{fragments/about-us-layout.html :: header}"></header>
+<article class="about-us container-fluid">
+    <header>
+        <h1 class="about-us-headline">
+            Meet the Cybernetic Minds
+        </h1>
+    </header>
+    <section>
+        <div class="container my-5">
+            <h2 class="text-center mb-5 text-cyber-pink fst-italic">Meet the visionaries who ensure your data is not
+                just protected, but fortified
+                against even the most sophisticated threats.
+            </h2>
+            <hr>
+            <img alt="Our team" class="d-flex mx-auto" th:src="@{../../images/company3.jpg}">
+            <hr>
+
+            <!-- First Cards Row -->
+            <div class="row justify-content-center m-20">
+
+                <!-- Dr. Zane Rivers Card -->
+                <div class="col-md-4">
+                    <div class="card custom-card text-center shadow-sm d-flex flex-column h-100">
+                        <img class="card-img-top" th:src="@{../../images/first.jpg}" alt="Dr. Zane Rivers">
+                        <div class="card-body card-body-custom">
+                            <h2 class="text-cyber-yellow">Dr. Zane Rivers</h2>
+                            <h4 class="text-cyber-pink">Cybersecurity Architect</h4>
+                            <hr>
+                            <p> Dr. Rivers is the driving force behind our neural network defense systems. With his
+                                augmented intellect and deep understanding of machine learning, Zane designs security
+                                frameworks that predict and adapt to evolving threats. A former AI ethics researcher,
+                                his passion is to push the boundaries of digital safety while preserving human
+                                integrity.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mira Huxley Card -->
+                <div class="col-md-4">
+                    <div class="card custom-card text-center shadow-sm d-flex flex-column h-100">
+                        <img class="card-img-top" th:src="@{../../images/second.jpg}" alt="Mira Huxley">
+                        <div class="card-body card-body-custom">
+                            <h2 class="text-cyber-yellow">Mira Huxley</h2>
+                            <h4 class="text-cyber-pink">Data Protection Engineer</h4>
+                            <hr>
+                            <p> Mira's neural implants allow her to process data in real-time, making her one of the
+                                most advanced data protection engineers in the world. A former cryptography expert for
+                                government agencies, she now applies her talents to shielding your most sensitive
+                                information from the ever-evolving cyber underworld.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Nyx Kaelan Card -->
+                <div class="col-md-4">
+                    <div class="card custom-card text-center shadow-sm d-flex flex-column h-100">
+                        <img class="card-img-top" th:src="@{../../images/fifth.jpg}" alt="Nyx Kaelan">
+                        <div class="card-body card-body-custom">
+                            <h2 class="text-cyber-yellow">Nyx Kaelan</h2>
+                            <h4 class="text-cyber-pink">Risk Management Strategist</h4>
+                            <hr>
+                            <p> Nyx’s expertise lies in the calculation and mitigation of digital risks. With her
+                                cybernetic eye implant, she can visualize potential vulnerabilities in any system within
+                                seconds. She combines her neural augmentation with a strategic mind to predict, prevent,
+                                and outsmart cybercriminals.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Second Row -->
+        <div class="row justify-content-center m-20">
+
+            <!-- Dr. Aiden Thorne Card -->
+            <div class="col-md-4">
+                <div class="card custom-card text-center shadow-sm d-flex flex-column h-100">
+                    <img class="card-img-top" th:src="@{../../images/fourth.jpg}" alt="Dr. Aiden Thorne">
+                    <div class="card-body card-body-custom">
+                        <h2 class="text-cyber-yellow">Dr. Aiden Thorne</h2>
+                        <h4 class="text-cyber-pink">Neural-Health Security Expert</h4>
+                        <hr>
+                        <p> Dr. Thorne is an expert in protecting the neural interfaces that power today’s
+                            augmentations. His research focuses on protecting individuals from cybernetic attacks that
+                            can hijack the mind. A leading mind in neurosecurity, Aiden ensures that your personal
+                            augmentations remain as safe as your digital data.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Lila "Cipher" Vega Card -->
+            <div class="col-md-4">
+                <div class="card custom-card text-center shadow-sm d-flex flex-column h-100">
+                    <img class="card-img-top" th:src="@{../../images/third.jpg}" alt="Lila 'Cipher' Vega">
+                    <div class="card-body card-body-custom">
+                        <h2 class="text-cyber-yellow">Lila "Cipher" Vega</h2>
+                        <h4 class="text-cyber-pink">AI Integration Specialist</h4>
+                        <hr>
+                        <p> Known in the underground as Cipher, Lila is responsible for integrating AI into CyberSure’s
+                            systems. Her neural networks constantly evolve, improving their ability to adapt and learn
+                            from new threats. With an unyielding commitment to creating intuitive, self-improving
+                            security protocols, Lila is revolutionizing how AI safeguards our world.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Kade "Byte" Drayke Card -->
+            <div class="col-md-4">
+                <div class="card custom-card text-center shadow-sm d-flex flex-column h-100">
+                    <img class="card-img-top" th:src="@{../../images/sixth.jpg}" alt="Kade 'Byte' Drayke">
+                    <div class="card-body card-body-custom">
+                        <h2 class="text-cyber-yellow">Kade "Byte" Drayke</h2>
+                        <h4 class="text-cyber-pink">Lead Programmer</h4>
+                        <hr>
+                        <p> Kade Drayke, known in the coding world as "Byte," is the mastermind behind CyberSure’s
+                            revolutionary encryption systems. A former hacker with a cybernetic neural interface that
+                            allows him to write code at the speed of thought, Byte’s ability to integrate complex
+                            algorithms into seamless security protocols is unparalleled. He is known for his innovation
+                            in cyber defense systems, blending human ingenuity with machine precision.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</article>
+<footer th:replace="~{fragments/about-us-layout.html :: footer}"></footer>
+</body>
+</html>

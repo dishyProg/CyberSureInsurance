@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head th:replace="~{fragments/about-us-layout.html :: head}"></head>
+<body>
+<header th:replace="~{fragments/about-us-layout.html :: header}"></header>
+<article class="about-us container-fluid">
+    <header>
+        <h1 class="about-us-headline">
+            About Us
+        </h1>
+    </header>
+    <section>
+        <div class="images-stack">
+            <img class="city-top-2" th:src="@{images/cyberpunk-city-sunrise.jpg}">
+            <img class="city-top-2" th:src="@{images/city-top1.jpg}">
+            <img class="city-top-2" th:src="@{images/city-top-cyber.jpg}">
+        </div>
+        <div class="about-us-div row">
+            <p>
+                Welcome to <strong class="text-cyber-yellow">CyberSure Security</strong>, the vanguard of tomorrow’s insurance solutions. In a world where
+                technology seamlessly integrates into our lives, we stand as a beacon of trust and innovation,
+                safeguarding the digital and physical realms alike. From neural implants to data integrity, our mission
+                is to protect the future you’ve built, ensuring it remains secure and resilient.
+            </p>
+            <p>
+                Our company is driven by a team of cybernetic minds, blending human ingenuity with advanced AI to create
+                unparalleled solutions. At <strong class="text-cyber-yellow">CyberSure Security</strong>, ethics and transparency are at the core of our
+                operations. We strive to lead with responsibility, offering cutting-edge protection tailored to the
+                unique needs of an ever-evolving digital age. Whether you're navigating the neon streets or traversing
+                virtual landscapes, we ensure your assets, health, and future are shielded against uncertainty. Join us
+                in redefining what it means to feel secure in a cybernetic world.
+            </p>
+        </div>
+        <div>
+            <a th:href="@{/about-us/nexus-of-protection}">
+                <h3 class="about-us-headline">
+                    The Nexus of Protection
+                </h3>
+            </a>
+            <div class="about-us-div row">
+                <p>
+                    Our foundational philosophy: the intersection of advanced technology and unwavering commitment to
+                    your safety. Discover how we unify innovation and trust to create a seamless security network.
+                </p>
+            </div>
+        </div>
+        <div>
+            <a th:href="@{/about-us/digital-legacy}">
+                <h3 class="about-us-headline">
+                    Digital Legacy
+                </h3>
+            </a>
+            <div class="about-us-div row">
+                <p>
+                    Ensure your digital footprint endures. We provide strategies to safeguard your online presence and
+                    assets for generations to come.
+                </p>
+            </div>
+        </div>
+        <div>
+            <a th:href="@{/about-us/meet-us}">
+                <h3 class="about-us-headline">
+                    Meet the Cybernetic Minds
+                </h3>
+            </a>
+            <div class="about-us-div row">
+                <p>
+                    Learn about the brilliant human and AI-driven team shaping the future of digital insurance and
+                    security.
+                </p>
+            </div>
+        </div>
+        <div>
+            <a th:href="@{/about-us/ethical-protocols}">
+                <h3 class="about-us-headline">
+                    Ethical Protocols
+                </h3>
+            </a>
+            <div class="about-us-div row">
+                <p>
+                    At CyberSure Security, our ethical guidelines are as advanced as our technology. Transparency and
+                    fairness drive every decision we make.
+                </p>
+            </div>
+        </div>
+        <div>
+            <a th:href="@{/about-us/work-opportunities}">
+                <h3 class="about-us-headline">
+                    Future Workforce Opportunities
+                </h3>
+            </a>
+            <div class="about-us-div row">
+                <p>
+                    Discover how you can join the CyberSure Security family and be part of the cutting-edge team
+                    redefining the insurance landscape.
+                </p>
+            </div>
+        </div>
+        <div>
+            <a th:href="@{/about-us/holo-press}">
+                <h3 class="about-us-headline">
+                    Holo-Press Releases
+                </h3>
+            </a>
+            <div class="about-us-div row">
+                <p>
+                    Stay informed with our latest updates, breakthroughs, and announcements, presented in an immersive
+                    holographic format.
+                </p>
+            </div>
+        </div>
+        <div>
+            <a th:href="@{/about-us/security-protocols}">
+                <h3 class="about-us-headline">
+                    Digital Security Protocols
+                </h3>
+            </a>
+            <div class="about-us-div row">
+                <p>
+                    Explore the robust systems and safeguards we’ve developed to stay ahead of cyber threats and protect
+                    your most valuable assets.
+                </p>
+            </div>
+        </div>
+    </section>
+</article>
+<footer th:replace="~{fragments/about-us-layout.html :: footer}"></footer>
+</body>
+</html>

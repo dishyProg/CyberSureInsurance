@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head th:replace="~{fragments/products-layout.html :: head}"></head>
+<body>
+<header th:replace="~{fragments/products-layout.html :: header}"></header>
+<article class="about-us container-fluid">
+    <header>
+        <h1 class="about-us-headline">
+            CyberGlide Travel Coverage
+        </h1>
+        <br>
+        <h4 class="product-headline">
+            "Step Into the Future of Travel Security"
+        </h4>
+        <h5 class="product-headline">
+            "Your journey deserves protection as advanced as your destination."
+        </h5>
+    </header>
+    <section class="container-fluid">
+        <div class="d-flex justify-content-center align-items-center">
+            <img alt="cloud-resort" class="neural-image img-fluid" th:src="@{../images/cloud-resort3.jpg}">
+        </div>
+
+        <div class="container my-5">
+            <h1 class="text-center compare-plans mb-4">Choose tailored plans to protect every mile of your journey</h1>
+            <!-- Comparing Cards -->
+            <div class="row justify-content-center">
+
+                <!-- Basic -->
+                <div class="col-md-4">
+                    <div class="card custom-card text-center shadow-sm d-flex flex-column h-100">
+                        <div class="card-header card-custom-header">
+                            <h4 class="card-title custom-card-title">Basic Glide</h4>
+                            <p class="card-price">⌬29<span class="card-header-muted">/trip</span></p>
+                        </div>
+                        <div class="card-body card-body-custom">
+                            <ul class="list-unstyled">
+                                <li>☑️ Essential Delays And Interruptions Coverage</li>
+                                <li>☑️ Standard Support And Response</li>
+                                <li>❌ Medical Assistance</li>
+                                <li>❌ Luggage Coverage</li>
+                                <li>⌬5k Trip Coverage</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Elite -->
+                <div class="col-md-4">
+                    <div class="card custom-card text-center shadow-sm d-flex flex-column h-100">
+                        <div class="card-header card-elite-header">
+                            <h4 class="card-title custom-card-title">Elite TravelGuard</h4>
+                            <p class="card-price">⌬69<span class="card-header-muted">/trip</span></p>
+                        </div>
+                        <div class="card-body card-body-custom">
+                            <ul class="list-unstyled">
+                                <li>☑️ Enhanced Delays And Interruptions Coverage</li>
+                                <li>☑️ Priority Support And Response</li>
+                                <li>☑️ Partial Medical Assistance</li>
+                                <li>☑️ Limited Luggage Protection</li>
+                                <li>⌬25k Trip Coverage</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ultimate -->
+                <div class="col-md-4">
+                    <div class="card custom-card text-center shadow-sm d-flex flex-column h-100">
+                        <div class="card-header card-custom-header">
+                            <h4 class="card-title custom-card-title">Ultimate CyberGlide</h4>
+                            <p class="card-price">⌬129<span class="card-header-muted">/trip</span></p>
+                        </div>
+                        <div class="card-body card-body-custom">
+                            <ul class="list-unstyled">
+                                <li>👑 All-Inclusive Journey Protection</li>
+                                <li>👑 VIP Concierge Support</li>
+                                <li>🚑 Premium Global Medical Assistance</li>
+                                <li>🧳 Unlimited Luggage Coverage</li>
+                                <li>🤑 Unlimited Trip Coverage</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container my-5">
+            <h2 class="text-center compare-plans mb-4">Trusted by Riders Who Roam the Digital Roads</h2>
+
+            <!-- Customer Testimonials -->
+            <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="0" class="active"></button>
+                    <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="1"></button>
+                    <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="2"></button>
+                </div>
+                <div class="carousel-inner">
+
+                    <!-- Basic Testimonial -->
+                    <div class="carousel-item active mb-2">
+                        <div class="card text-center carousel-card shadow-sm">
+                            <div class="card-body carousel-custom">
+                                <p class="card-text custom-card-text">"Affordable coverage for smooth and secure everyday travel experiences."</p>
+                                <h5 class="card-title custom-card-title">Basic GlideShield</h5>
+                                <p class="card-header-muted">- Emily R., Freelance Designer</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Elite Testimonial -->
+                    <div class="carousel-item mb-2">
+                        <div class="card text-center carousel-card shadow-sm">
+                            <div class="card-body carousel-custom">
+                                <p class="card-text custom-card-text">"Keeps my trips safe with real-time monitoring and quick assistance."</p>
+                                <h5 class="card-title custom-card-title">Elite GlideGuard</h5>
+                                <p class="card-header-muted">- Mark T., Business Consultant</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Ultimate Testimonial -->
+                    <div class="carousel-item mb-2">
+                        <div class="card text-center carousel-card shadow-sm">
+                            <div class="card-body carousel-custom">
+                                <p class="card-text custom-card-text">"Full protection and peace of mind wherever my journeys take me."</p>
+                                <h5 class="card-title custom-card-title">Ultimate CyberTraveler</h5>
+                                <p class="card-header-muted">- Sophia L., Travel Blogger</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Carousel Controls -->
+                <a class="carousel-control-prev" th:href="@{'#testimonialCarousel'}" role="button" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </a>
+                <a class="carousel-control-next" th:href="@{'#testimonialCarousel'}" role="button" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- Insurance Form -->
+        <div sec:authorize="hasRole('USER')" class="container my-5">
+            <h2 class="text-center compare-plans mb-4">Embark Beyond Limits – Secure Your CyberGlide Coverage</h2>
+            <form method="post"
+                  th:action="@{/products/travel-safe}"
+                  th:object="${insuranceDTO}"
+            >
+                <div class="form-row">
+                    <label class="form-label col-3" for="insuranceName">Insurance Name:</label>
+                    <input class="col-3 form-i-50 form-i-name form-input" type="text" id="insuranceName" th:field="*{insuranceName}" readonly
+                           value="CyberGlide Travel Coverage"/>
+                </div>
+                <div class="form-row">
+                    <label class="form-label col-3" for="insuranceType">Insurance Type:</label>
+                    <select class="col-3 form-i-50 form-input" id="insuranceType" th:field="*{insuranceType}" onchange="updatePrice()">
+                        <option value="Basic Glide">Basic Glide</option>
+                        <option value="Elite TravelGuard" selected >Elite TravelGuard</option>
+                        <option value="Ultimate CyberGlide">Ultimate CyberGlide</option>
+                    </select>
+                </div>
+                <div class="form-row">
+                    <label class="col-3 form-label" for="insuranceStartDate">Insurance Start Date:</label>
+                    <input class="col-3 form-i-50 form-input" type="date" id="insuranceStartDate" th:field="*{insuranceStartDate}"/>
+                </div>
+
+                <div class="form-row">
+                    <label class="col-3 form-label" for="insuranceEndDate">Insurance End Date:</label>
+                    <input class="col-3 form-i-50 form-input" type="date" id="insuranceEndDate" th:field="*{insuranceEndDate}"/>
+                </div>
+                <div class="form-row">
+                    <label class="col-3 form-label" for="insurancePrice">Price:</label>
+                    <div class="col-3">
+                        ⌬<input class="input-unstyled" type="text" id="insurancePrice" th:field="*{price}" readonly/>/trip
+                    </div>
+                </div>
+
+                <div>
+                    <button class="custom-button submit-btn" type="submit">Submit</button>
+                </div>
+            </form>
+        </div>
+    </section>
+</article>
+<footer th:replace="~{fragments/products-layout.html :: footer}"></footer>
+<script th:src="@{../scripts/bootstrap.bundle.min.js}"></script>
+<script th:src="@{../scripts/insurance-price-script.js}"></script>
+</body>
+</html>

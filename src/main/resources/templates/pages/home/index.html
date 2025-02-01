@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head th:replace="~{fragments/home-layout.html :: head}"></head>
+<body class="homepage">
+<header th:replace="~{fragments/home-layout.html :: header}"></header>
+
+<article class="about-us">
+    <div class="flash-message-success" th:text="${success}" th:if="${success}"></div>
+    <div class="text-overlay">
+        <!-- Logo -->
+        <h1 class="logo-inside">CyberSure Security</h1>
+        <h3 class="slogan">Tomorrow's Protection, Today!</h3>
+        <p>Innovating Insurance with Artificial Intelligence</p>
+        <p>Empowering You with Next-Gen Protection</p>
+        <!-- Join Now button -->
+        <a sec:authorize="isAnonymous()" th:href="@{/account/register}"><button class="custom-button join-us">JOIN NOW</button></a>
+    </div>
+</article>
+<footer th:replace="~{fragments/home-layout.html :: footer}"></footer>
+</body>
+</html>

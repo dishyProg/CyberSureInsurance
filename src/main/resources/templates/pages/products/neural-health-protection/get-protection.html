@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head th:replace="~{fragments/products-layout.html :: head}"></head>
+<body>
+<header th:replace="~{fragments/products-layout.html :: header}"></header>
+<article class="about-us container-fluid">
+    <div class="flash-message-error" th:if="${error}">System malfunction detected. Attempt failed. Reboot and try
+        again.
+    </div>
+    <header>
+        <h1 class="about-us-headline">
+            Neural Health Protection
+        </h1>
+        <h4 class="product-headline">
+            "You're One Step Away From Securing Your Neural Future"
+        </h4>
+        <h5 class="product-headline">
+            "Choose a plan tailored to your needs and get the ultimate protection for your neural enhancements."
+        </h5>
+    </header>
+    <section class="container-fluid">
+        <div class="d-flex justify-content-center align-items-center">
+            <img alt="neural-head" class="neural-image img-fluid" th:src="@{../images/neural-head2.jpg}">
+        </div>
+
+        <!-- Compare Cards -->
+        <div class="container my-5">
+            <h1 class="text-center compare-plans mb-4">Pick the Plan That Fits Your Digital World</h1>
+            <div class="row justify-content-center">
+
+                <!-- Basic -->
+                <div class="col-md-4">
+                    <div class="card custom-card text-center shadow-sm d-flex flex-column h-100">
+                        <div class="card-header card-custom-header">
+                            <h4 class="card-title custom-card-title">Basic Shield</h4>
+                            <p class="card-price">⌬19<span class="card-header-muted">/month</span></p>
+                        </div>
+                        <div class="card-body card-body-custom">
+                            <ul class="list-unstyled">
+                                <li>☑️ Neural Hack Defense</li>
+                                <li>❌ Cognitive Backup</li>
+                                <li>❌ AI Monitoring</li>
+                                <li>Standard Support</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Elite -->
+                <div class="col-md-4">
+                    <div class="card custom-card text-center shadow-sm d-flex flex-column h-100">
+                        <div class="card-header card-elite-header">
+                            <h4 class="card-title custom-card-title">Elite Guard</h4>
+                            <p class="card-price">⌬49<span class="card-header-muted">/month</span></p>
+                        </div>
+                        <div class="card-body card-body-custom">
+                            <ul class="list-unstyled">
+                                <li>☑️ Neural Hack Defense</li>
+                                <li>☑️ Partial Cognitive Backup</li>
+                                <li>☑️ AI Monitoring</li>
+                                <li>Priority Support</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ultimate -->
+                <div class="col-md-4">
+                    <div class="card custom-card text-center shadow-sm d-flex flex-column h-100">
+                        <div class="card-header card-custom-header">
+                            <h4 class="card-title custom-card-title">Ultimate NeuroShield</h4>
+                            <p class="card-price">⌬99<span class="card-header-muted">/month</span></p>
+                        </div>
+                        <div class="card-body card-body-custom">
+                            <ul class="list-unstyled">
+                                <li>☑️ Full Neural Hack Defense</li>
+                                <li>☑️ Unlimited Cognitive Backup</li>
+                                <li>☑️ Advanced AI Monitoring</li>
+                                <li>👑 VIP Support</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container my-5">
+            <h2 class="text-center compare-plans mb-4">Your Mind, Our Mission: Trusted Everywhere</h2>
+
+            <!-- Customer Testimonial -->
+            <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="0" class="active"></button>
+                    <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="1"></button>
+                    <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="2"></button>
+                </div>
+                <div class="carousel-inner">
+
+                    <!-- Basic Testimonial -->
+                    <div class="carousel-item active mb-2">
+                        <div class="card text-center carousel-card shadow-sm">
+                            <div class="card-body carousel-custom">
+                                <p class="card-text custom-card-text">"A great starting point for peace of mind!"</p>
+                                <h5 class="card-title custom-card-title">Basic Shield Plan</h5>
+                                <p class="card-header-muted">- John D., Neural Upgrade User</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Elite Testimonial -->
+                    <div class="carousel-item mb-2">
+                        <div class="card text-center carousel-card shadow-sm">
+                            <div class="card-body carousel-custom">
+                                <p class="card-text custom-card-text">"Their monitoring saved me during a critical
+                                    moment."</p>
+                                <h5 class="card-title custom-card-title">Elite Guard Plan</h5>
+                                <p class="card-header-muted">- Jane S., Cybersecurity Enthusiast</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Ultimate Testimonial -->
+                    <div class="carousel-item mb-2">
+                        <div class="card text-center carousel-card shadow-sm">
+                            <div class="card-body carousel-custom">
+                                <p class="card-text custom-card-text">"The best investment for my neural safety. Worth
+                                    every credit!"</p>
+                                <h5 class="card-title custom-card-title">Ultimate NeuroShield Plan</h5>
+                                <p class="card-header-muted">- Samuel W., Augmented Professional</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Carousel Controls -->
+                <a class="carousel-control-prev" th:href="@{'#testimonialCarousel'}" role="button" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </a>
+                <a class="carousel-control-next" th:href="@{'#testimonialCarousel'}" role="button" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- Insurance Form -->
+        <div sec:authorize="hasRole('USER')" class="container my-5">
+            <h2 class="text-center compare-plans mb-4">Activate Your Neural Defense System</h2>
+            <form method="post"
+                  th:action="@{/products/guard-your-mind}"
+                  th:object="${insuranceDTO}"
+            >
+                <div class="form-row">
+                    <label class="form-label col-3" for="insuranceName">Insurance Name:</label>
+                    <input class="col-3 form-i-50 form-i-name form-input" type="text" id="insuranceName" th:field="*{insuranceName}" readonly
+                           value="Neural Health Protection"/>
+                </div>
+                <div class="form-row">
+                    <label class="form-label col-3" for="insuranceType">Insurance Type:</label>
+                    <select class="col-3 form-i-50 form-input" id="insuranceType" th:field="*{insuranceType}" onchange="updatePrice()">
+                        <option value="Basic Shield">Basic Shield</option>
+                        <option value="Elite Guard" selected >Elite Guard</option>
+                        <option value="Ultimate NeuroShield">Ultimate NeuroShield</option>
+                    </select>
+                </div>
+                <div class="form-row">
+                    <label class="col-3 form-label" for="insuranceStartDate">Insurance Start Date:</label>
+                    <input class="col-3 form-i-50 form-input" type="date" id="insuranceStartDate" th:field="*{insuranceStartDate}"/>
+                </div>
+
+                <div class="form-row">
+                    <label class="col-3 form-label" for="insuranceEndDate">Insurance End Date:</label>
+                    <input class="col-3 form-i-50 form-input" type="date" id="insuranceEndDate" th:field="*{insuranceEndDate}"/>
+                </div>
+                <div class="form-row">
+                    <label class="col-3 form-label" for="insurancePrice">Price:</label>
+                    <div class="col-3">
+                        ⌬<input class="input-unstyled" type="text" id="insurancePrice" th:field="*{price}" readonly/>/month
+                    </div>
+                </div>
+
+                <div>
+                    <button class="custom-button submit-btn" type="submit">Submit</button>
+                </div>
+
+            </form>
+        </div>
+    </section>
+</article>
+<footer th:replace="~{fragments/products-layout.html :: footer}"></footer>
+<script th:src="@{../scripts/bootstrap.bundle.min.js}"></script>
+<script th:src="@{../scripts/insurance-price-script.js}"></script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head th:replace="~{fragments/account-layout.html :: head}"></head>
+<body>
+<header th:replace="~{fragments/account-layout.html :: header}"></header>
+<article class="about-us container-fluid">
+    <!-- Flash messages -->
+    <div class="flash-message-success" th:text="${success}" th:if="${success}"></div>
+    <div class="flash-message-error log" th:if="${error}" th:text="${error}"></div>
+
+    <!-- Admin Details -->
+    <h1 class="about-us-headline">Admin Details</h1>
+    <div class="row">
+        <p class="col-5 about-us-div detail-p">First Name: <span class="detail-span"
+                                                                 th:text="${userDetails.firstName}"></span></p>
+        <p class="col-5 ml-20 about-us-div detail-p">Street & House Number: <span class="detail-span"
+                                                                                  th:text="${userDetails.streetAndNumber}"></span>
+        </p>
+    </div>
+    <div class="row">
+        <p class="col-5 about-us-div detail-p">Last Name: <span class="detail-span"
+                                                                th:text="${userDetails.lastName}"></span></p>
+        <p class="col-5 ml-20 about-us-div detail-p">Zip Code: <span class="detail-span"
+                                                                     th:text="${userDetails.zipCode}"></span></p>
+    </div>
+    <div class="row">
+        <p class="col-5 about-us-div detail-p">Email: <span class="detail-span" th:text="${userDetails.email}"></span>
+        </p>
+        <p class="col-5 ml-20 about-us-div detail-p">City: <span class="detail-span"
+                                                                 th:text="${userDetails.city}"></span></p>
+    </div>
+    <div class="row">
+        <p class="col-5 about-us-div detail-p">Phone Number: <span class="detail-span"
+                                                                   th:text="${userDetails.phoneNumber}"></span></p>
+        <p class="col-5 ml-20 about-us-div detail-p">Country: <span class="detail-span"
+                                                                    th:text="${userDetails.country}"></span></p>
+    </div>
+
+    <a class="link-basic" th:href="@{/account/admin-edit}">Edit Details</a>
+    <a class="link-basic ml-750" th:href="@{/account/delete-account}">Delete account</a>
+    <br>
+
+    <!-- List of all users (excluding Admin) -->
+    <h1 class="about-us-headline">Shielded Entities</h1>
+    <table class="table table-hover">
+        <thead>
+        <tr>
+            <th>Name</th>
+            <th>Address</th>
+            <th>City</th>
+            <th>Country</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="userDetails : ${insuredUsers}">
+            <td><a class="link-basic" th:text="${userDetails.firstName + ' ' + userDetails.lastName}"
+                   th:href="@{'/account/' + ${userDetails.userId}}"></a></td>
+            <td th:text="${userDetails.streetAndNumber}"></td>
+            <td th:text="${userDetails.city}"></td>
+            <td th:text="${userDetails.country}"></td>
+            <td class="text-end">
+                <a class="me-2 link-basic" th:href="@{'/account/edit/' + ${userDetails.userId}}">Edit</a>
+                <a class="link-basic" th:href="@{'/account/delete/' + ${userDetails.userId}}">Delete</a>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</article>
+<footer th:replace="~{fragments/account-layout.html :: footer}"></footer>
+</body>
+</html>

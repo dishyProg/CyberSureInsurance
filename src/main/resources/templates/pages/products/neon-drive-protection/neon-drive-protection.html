@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head th:replace="~{fragments/products-layout.html :: head}"></head>
+<body>
+<header th:replace="~{fragments/products-layout.html :: header}"></header>
+<article class="about-us container-fluid">
+    <header>
+        <h1 class="about-us-headline">
+            Neon Drive Protection
+        </h1>
+        <h4 class="product-headline">
+            "Drive the Future: Protect Your Neon Ride from the Shadows"
+        </h4>
+        <h5 class="product-headline">
+            "In a world of autonomous vehicles and cyber threats, your ride deserves the best protection."
+        </h5>
+        <hr class="my-2">
+        <a th:href="@{/products/protect-your-ride}">
+            <button class="custom-button drive-btn col-3">Protect Your Ride!</button>
+        </a>
+    </header>
+    <section class="container-fluid">
+        <div class="d-flex justify-content-center align-items-center">
+            <img alt="neon-drive" class="neural-image img-fluid" th:src="@{../images/neon-drive2.jpg}">
+        </div>
+        <div>
+            <h3 class="product-headline mt-3">
+                "Why Neon Drive Protection?"
+            </h3>
+            <p><strong>Cyber-Enhanced Security: </strong>Guard your autonomous vehicle from digital hijackers with next-gen firewalls.</p>
+            <p><strong>GPS Integrity: </strong>Prevent malicious manipulation of your vehicle’s GPS and navigation systems.</p>
+            <p><strong>Real-Time Monitoring: </strong>24/7 monitoring for cyber threats targeting your ride.</p>
+        </div>
+        <div>
+            <h3 class="product-headline mt-5">
+                "How We Secure Your Neon Ride"
+            </h3>
+            <p><strong>Step 1: </strong>Choose your protection—tailored plans for personal and commercial vehicles.</p>
+            <p><strong>Step 2: </strong>Advanced AI continuously scans for vulnerabilities and unauthorized access.</p>
+            <p><strong>Step 3: </strong>Instant response and recovery for your vehicle in the event of a cyberattack.</p>
+        </div>
+        <div class="d-flex justify-content-center align-items-center text-center row">
+            <h4 class="product-headline my-4" style="max-width: 500px;">
+                Trusted by Riders Who Roam the Digital Roads
+            </h4>
+            <blockquote class="blockquote">
+                <p class="mb-0"><i>"When my self-driving car was compromised, CyberSure Security instantly took control and brought it back to safety. Now I can drive without fear."</i></p>
+            </blockquote>
+        </div>
+        <div>
+            <h3 class="product-headline mt-5">
+                "Affordable Protection for Every Type of Neon Ride"
+            </h3>
+            <p><strong>Basic DriveShield</strong> - Essential protection for everyday rides.</p>
+            <p><strong>Elite CyberDrive</strong> - Enhanced security for autonomous vehicles.</p>
+            <p><strong>Ultimate NeonGuard</strong> - Full protection for high-value or commercial vehicles.</p>
+        </div>
+    </section>
+</article>
+<footer th:replace="~{fragments/products-layout.html :: footer}"></footer>
+</body>
+</html>

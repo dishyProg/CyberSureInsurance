@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head th:replace="~{fragments/products-layout.html :: head}"></head>
+<body>
+<header th:replace="~{fragments/products-layout.html :: header}"></header>
+<article class="about-us container-fluid">
+    <header>
+        <h1 class="about-us-headline">
+            Neural Health Protection
+        </h1>
+        <h4 class="product-headline">
+            "Secure Your Neural Pathways: Protect What Makes You, You"
+        </h4>
+        <h5 class="product-headline">
+            "In a world of cybernetic enhancements, your mind deserves the best defense."
+        </h5>
+        <hr class="my-2">
+        <a th:href="@{/products/guard-your-mind}"><button class="custom-button neural-btn col-3">Guard Your Mind!</button></a>
+    </header>
+    <section class="container-fluid">
+        <div class="d-flex justify-content-center align-items-center">
+            <img alt="neural-head" class="neural-image img-fluid" th:src="@{../images/neural-head3.jpg}">
+        </div>
+        <div>
+            <h3 class="product-headline mt-3">
+                "Why Neural-Health Protection?"
+            </h3>
+            <p><strong>Mind Shielding: </strong>Defense against neural hacks and intrusions.</p>
+            <p><strong>Cognitive Backup: </strong>Preserve your neural data in case of cyberattacks.</p>
+            <p><strong>Synaptic Insurance: </strong>Coverage for accidental neural malfunctions.</p>
+        </div>
+        <div>
+            <h3 class="product-headline mt-5">
+                "How We Protect Your Neural World"
+            </h3>
+            <p><strong>Step 1: </strong>Enroll with ease—tailored protection plans for your neural augmentations.</p>
+            <p><strong>Step 2: </strong>Advanced AI continuously monitors for intrusions.</p>
+            <p><strong>Step 3: </strong>Instant recovery and support when things go wrong.</p>
+        </div>
+        <div class="d-flex justify-content-center align-items-center text-center row">
+            <h4 class="product-headline my-4" style="max-width: 500px;">
+                Trusted by Augmented Minds Everywhere
+            </h4>
+            <blockquote class="blockquote">
+                <p class="mb-0"><i>"When my neural implant was hacked, CyberSure Security had me covered instantly. My mind is my greatest asset, and now it’s safe."</i></p>
+            </blockquote>
+        </div>
+        <div>
+            <h3 class="product-headline mt-5">
+                "Affordable Plans for Every Neural Upgrade"
+            </h3>
+            <p><strong>Basic Shield</strong> - Essential protection for standard neural implants.</p>
+            <p><strong>Elite Guard</strong> - Premium coverage with advanced monitoring.</p>
+            <p><strong>Ultimate NeuroShield</strong> - Comprehensive protection for all enhancements.</p>
+        </div>
+    </section>
+</article>
+<footer th:replace="~{fragments/products-layout.html :: footer}"></footer>
+</body>
+</html>

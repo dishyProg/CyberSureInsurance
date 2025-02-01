@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head th:replace="~{fragments/products-layout.html :: head}"></head>
+<body>
+<header th:replace="~{fragments/products-layout.html :: header}"></header>
+<article class="about-us container-fluid">
+    <header>
+        <h1 class="about-us-headline">
+            AugmentGuard
+        </h1>
+        <h4 class="product-headline">
+            "Guard Your Augments: Stay One Step Ahead in the Cybernetic Age"
+        </h4>
+        <h5 class="product-headline">
+            "With cyber enhancements becoming the norm, AugmentGuard ensures your implants, upgrades, and abilities stay
+            protected from the digital underworld."
+        </h5>
+        <hr class="my-2">
+        <a th:href="@{/products/shield-enhancements}">
+            <button class="custom-button augment-btn col-3">Shield Enhancements!</button>
+        </a>
+    </header>
+    <section class="container-fluid">
+        <div class="d-flex justify-content-center align-items-center">
+            <img alt="augment-guard" class="neural-image img-fluid" th:src="@{../images/aug-person2.jpg}">
+        </div>
+        <div>
+            <h3 class="product-headline mt-3">
+                "Why Choose AugmentGuard?"
+            </h3>
+            <p><strong>Implant Protection: </strong>Safeguard your cybernetic enhancements from cyberattacks, hacks, and
+                unauthorized access.</p>
+            <p><strong>Cognitive and Neural Safeguards: </strong>Prevent unauthorized manipulation of your brain
+                implants and cognitive enhancements.</p>
+            <p><strong>Real-Time Monitoring: </strong>Advanced AI continuously scans for threats to your enhancements,
+                ensuring they stay secure.</p>
+            <p><strong>Instant Recovery: </strong>In the event of a malfunction or cyberattack, AugmentGuard instantly
+                restores your enhancements to full functionality.</p>
+        </div>
+        <div>
+            <h3 class="product-headline mt-5">
+                "How AugmentGuard Protects Your Future"
+            </h3>
+            <p><strong>Step 1: </strong>Choose your plan—tailored for all types of augmentations, from neural interfaces
+                to physical enhancements.</p>
+            <p><strong>Step 2: </strong>Advanced AI monitors the integrity of your implants, continuously adapting to
+                evolving cyber threats.</p>
+            <p><strong>Step 3: </strong>In case of an attack, AugmentGuard isolates and neutralizes the threat,
+                restoring your enhancements to peak performance.</p>
+            <p><strong>Step 4: </strong>24/7 support ensures you're never without help, even if something goes wrong
+                with your enhancements.</p>
+        </div>
+        <div class="d-flex justify-content-center align-items-center text-center row">
+            <h4 class="product-headline my-4" style="max-width: 500px;">
+                Trusted by the Cybernetic Elite
+            </h4>
+            <blockquote class="blockquote">
+                <p class="mb-0"><i>"When my neural interface was compromised, AugmentGuard instantly protected my mind
+                    and restored my implant. I’m now confident that my enhancements will always stay secure in this
+                    unpredictable digital world."</i></p>
+            </blockquote>
+        </div>
+        <div>
+            <h3 class="product-headline mt-5">
+                "Affordable Protection for Your Augments"
+            </h3>
+            <p><strong>Basic AugmentShield</strong> - Essential protection for basic implants and upgrades.</p>
+            <p><strong>Elite AugmentGuard</strong> - Advanced security for complex cybernetic enhancements, including
+                neural and physical upgrades.</p>
+            <p><strong>Ultimate CyberGuard</strong> - Full-spectrum protection for all augmentations, including advanced
+                monitoring, backup systems, and real-time threat response.</p>
+        </div>
+    </section>
+</article>
+<footer th:replace="~{fragments/products-layout.html :: footer}"></footer>
+</body>
+</html>

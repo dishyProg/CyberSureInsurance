@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head th:replace="~{fragments/account-layout.html :: head}"></head>
+<body>
+<header th:replace="~{fragments/account-layout.html :: header}"></header>
+<article>
+    <div class="flash-message-success log" th:text="${success}" th:if="${success}"></div>
+    <div class="flash-message-error log" th:if="${param.error}">Access denied: Unknown credentials. Retry protocol.
+    </div>
+    <div class="login-box">
+
+        <!-- Log in form -->
+        <form th:action="@{/account/login}" method="post">
+            <div class="user-box">
+                <input type="text" name="email" id="email">
+                <label for="email">Email</label>
+            </div>
+            <div class="user-box">
+                <input type="password" name="password" id="password">
+                <label for="password">Password</label>
+            </div>
+            <center>
+                <button class="account-btn" type="submit">
+                    LOG IN
+                    <span></span>
+                </button>
+            </center>
+            <small class="account-text-small">Your mind’s not protected yet? <a class="account-link"
+                                                                                th:href="@{/account/register}">Join
+                CyberSure Security now</a> and evolve.</small>
+        </form>
+    </div>
+</article>
+<footer th:replace="~{fragments/account-layout.html :: footer}"></footer>
+</body>
+</html>

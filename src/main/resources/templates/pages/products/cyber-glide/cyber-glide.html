@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head th:replace="~{fragments/products-layout.html :: head}"></head>
+<body>
+<header th:replace="~{fragments/products-layout.html :: header}"></header>
+<article class="about-us container-fluid">
+    <header>
+        <h1 class="about-us-headline">
+            CyberGlide Travel Coverage
+        </h1>
+        <h4 class="product-headline">
+            "Journey Through the Neon World: Travel with Confidence"
+        </h4>
+        <h5 class="product-headline">
+            "Whether you’re traveling to the city’s neon-lit heart or distant digital frontiers, your protection is just
+            a click away."
+        </h5>
+        <hr class="my-2">
+        <a th:href="@{/products/travel-safe}">
+            <button class="custom-button travel-btn col-3">Travel Safe!</button>
+        </a>
+    </header>
+    <section class="container-fluid">
+        <div class="d-flex justify-content-center align-items-center">
+            <img alt="cloud-resort" class="neural-image img-fluid" th:src="@{../images/cloud-resort8.jpg}">
+        </div>
+        <div>
+            <h3 class="product-headline mt-3">
+                "Why CyberGlide Travel Coverage?"
+            </h3>
+            <p><strong>Digital Travel Insurance: </strong>Whether it’s a cyberattack on your autonomous vehicle or a
+                malfunction in your neural enhancements, CyberGlide has you covered.</p>
+            <p><strong>Flight Protection: </strong>Protection for high-speed flights and intercontinental journeys,
+                shielding your data and health during travel.</p>
+            <p><strong>Emergency Assistance: </strong>24/7 assistance no matter where you are, keeping you safe in every
+                corner of the digital world.</p>
+            <p><strong>AI-Assisted Claims: </strong>Make claims instantly through our AI-powered system, which processes
+                your requests in real time.</p>
+        </div>
+        <div>
+            <h3 class="product-headline mt-5">
+                "How CyberGlide Travel Coverage Works"
+            </h3>
+            <p><strong>Step 1: </strong>Select your travel coverage—whether it’s for short trips or long-haul journeys,
+                we’ve got a plan for you.</p>
+            <p><strong>Step 2: </strong>Our AI continuously monitors travel threats, including cyber disruptions, theft,
+                and malfunctions.</p>
+            <p><strong>Step 3: </strong>Instant recovery services ensure you're never stranded, no matter what happens
+                during your travels.</p>
+            <p><strong>Step 4: </strong>Digital health and data protection during your entire journey to keep you
+                connected and safe.</p>
+        </div>
+        <div class="d-flex justify-content-center align-items-center text-center row">
+            <h4 class="product-headline my-4" style="max-width: 500px;">
+                Trusted by Wanderers of the Neon World
+            </h4>
+            <blockquote class="blockquote">
+                <p class="mb-0"><i>"CyberGlide Travel Coverage was a lifesaver during my trip. When my vehicle was
+                    hijacked, I was back on track before I even realized it. Now, I travel with confidence, knowing my
+                    safety is in trusted hands."</i></p>
+            </blockquote>
+        </div>
+        <div>
+            <h3 class="product-headline mt-5">
+                "Affordable Coverage for Every Digital Nomad"
+            </h3>
+            <p><strong>Basic Glide</strong> - Essential coverage for short trips and daily commutes.</p>
+            <p><strong>Elite TravelGuard</strong> - Premium coverage with added protection for high-speed journeys and
+                cyber threats.</p>
+            <p><strong>Ultimate CyberGlide</strong> - Comprehensive coverage for global travels, with advanced health,
+                vehicle, and data protection.</p>
+        </div>
+    </section>
+</article>
+<footer th:replace="~{fragments/products-layout.html :: footer}"></footer>
+</body>
+</html>
