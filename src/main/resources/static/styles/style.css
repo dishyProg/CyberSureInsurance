@@ -164,14 +164,8 @@ footer a:hover {
     text-shadow: 1px 1.5px 1px var(--cyber-blue-footer), 0 0 10px #000, 0 0 20px #000;
 }
 
-body > header {
+body > header > nav {
     background-color: rgba(34, 34, 34, 0.4);
-    width: 100%;
-    display: flex;
-    justify-content: space-evenly;
-    position: fixed;
-    z-index: 1;
-    top: 0;
 }
 
 .slogan {
@@ -640,13 +634,13 @@ option {
 
 @media (max-width: 1700px) {
     .about-us {
-        margin: 200px 50px 20px 50px;
+        margin: 100px 50px 20px 50px;
     }
 }
 
 @media (max-width: 1500px) {
     .about-us {
-        margin: 200px 50px 20px 10px;
+        margin: 100px 50px 20px 10px;
     }
 }
 
@@ -658,7 +652,7 @@ option {
 
 @media (max-width: 768px) {
     .about-us {
-        margin: 180px 20px 10px 0;
+        margin: 200px 20px 10px 0;
         padding: 10px;
     }
 }
