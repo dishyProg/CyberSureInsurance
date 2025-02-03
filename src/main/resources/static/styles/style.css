@@ -638,22 +638,34 @@ option {
     text-shadow: 0 0 5px #000, 0 0 2px #000;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1700px) {
     .about-us {
         margin: 200px 50px 20px 50px;
     }
 }
 
+@media (max-width: 1500px) {
+    .about-us {
+        margin: 200px 50px 20px 10px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .about-us {
+        margin: 200px 50px 20px 10px;
+    }
+}
+
 @media (max-width: 768px) {
     .about-us {
-        margin: 180px 20px 10px 20px;
+        margin: 180px 20px 10px 0;
         padding: 10px;
     }
 }
 
 @media (max-width: 480px) {
     .about-us {
-        margin: 200px 10px 10px 10px;
+        margin: 200px 10px 10px 0;
     }
 }
 
